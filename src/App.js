@@ -9,7 +9,10 @@ import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 class App extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      input: "",
+      imageURL: ""
+    };
   }
 
   onInputchange = (event) => {
