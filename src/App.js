@@ -31,6 +31,10 @@ class App extends Component {
     }
   }
 
+  displayfaceBox = (box) => {
+    this.setState({ box: box });
+  }
+
   onInputchange = (event) => {
     this.setState({ input: event.target.value });
   }
@@ -39,12 +43,13 @@ class App extends Component {
     this.setState({ imageURL: this.state.input });
     app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
       .then(response => console.log(this.calculateFaceLocation(response)))
-      .then(box => console.log(box))
+      .then(box => this.displayfaceBox(box))
       .catch(err => console.log(err));
   }
 
   render() {
-    const { imageURL } = this.state;
+    const { imageURL, box } = this.state;
+    console.log(box);
     return (
       <div className="App">
         <Navigation />
