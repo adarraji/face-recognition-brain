@@ -20,7 +20,7 @@ class App extends Component {
   }
 
   onButtonSubmit = () => {
-    console.log("CLICK!!!");
+    this.setState({ imageURL: this.state.input });
   }
 
   render() {
