@@ -24,13 +24,14 @@ class App extends Component {
   }
 
   render() {
+    const { imageURL } = this.state;
     return (
       <div className="App">
         <Navigation />
         <Logo />
         <Rank />
         <ImageLinkForm onInputchange={this.onInputchange} onButtonSubmit={this.onButtonSubmit} />
-        <FaceRecognition />
+        <FaceRecognition imageURL={imageURL} />
       </div>
     );
   }
