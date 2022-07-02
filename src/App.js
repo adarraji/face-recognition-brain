@@ -7,6 +7,10 @@ import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
   render() {
     return (
       <div className="App">
