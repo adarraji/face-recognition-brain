@@ -15,5 +15,6 @@ To run the application
 * React
 * React Tilty
 * Tachyons
+* Clarifai API
 
 ## Deployment
