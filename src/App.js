@@ -16,13 +16,17 @@ class App extends Component {
     console.log(event.target.value);
   }
 
+  onButtonSubmit = () => {
+    console.log("CLICK!!!");
+  }
+
   render() {
     return (
       <div className="App">
         <Navigation />
         <Logo />
         <Rank />
-        <ImageLinkForm onInputchange={this.onInputchange} />
+        <ImageLinkForm onInputchange={this.onInputchange} onButtonSubmit={this.onButtonSubmit} />
         <FaceRecognition />
       </div>
     );
