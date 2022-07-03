@@ -6,6 +6,7 @@ import Rank from './components/Rank/Rank';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import SignIn from './components/SignIn/SignIn';
+import Register from './components/Rigister/Register';
 import Clarifai from "clarifai";
 
 const app = new Clarifai.App({
@@ -69,7 +70,11 @@ class App extends Component {
               <ImageLinkForm onInputchange={this.onInputchange} onButtonSubmit={this.onButtonSubmit} />
               <FaceRecognition imageURL={imageURL} box={box} />
             </div>
-            : <SignIn onRouteChnage={this.onRouteChnage} />
+            : (
+              route === "signin"
+                ? <SignIn onRouteChnage={this.onRouteChnage} />
+                : <Register onRouteChnage={this.onRouteChnage} />
+            )
         }
       </div>
     );
