@@ -12,7 +12,7 @@ const FaceRecognition = ({ imageURL, box }) => {
     return (
         <div className="ma1 flex justify-center">
             <div className="flex justify-center absolute">
-                <img className="inputImage pa2" alt="" src={imageURL} />
+                <img id="inputImage" className="inputImage pa2" alt="" src={imageURL} />
                 <div className="bounding-box" style={boxStyles}></div>
             </div>
         </div>
