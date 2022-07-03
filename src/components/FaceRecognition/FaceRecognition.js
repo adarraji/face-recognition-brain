@@ -2,7 +2,6 @@ import React from "react";
 import "./FaceRecognition.css"
 
 const FaceRecognition = ({ imageURL, box }) => {
-    console.log(box.topRow);
     const boxStyles = {
         top: box.topRow,
         left: box.leftcol,
