@@ -18,8 +18,13 @@ class App extends Component {
     this.state = {
       input: "",
       imageURL: "",
-      box: {}
+      box: {},
+      route: "home"
     };
+  }
+
+  onRouteChnage = (route) => {
+    this.setState({ route: route });
   }
 
   calculateFaceLocation = (data) => {
@@ -52,15 +57,20 @@ class App extends Component {
   }
 
   render() {
-    const { imageURL, box } = this.state;
+    const { imageURL, box, route } = this.state;
     return (
       <div className="App">
         <Navigation />
-        <SignIn />
-        <Logo />
-        <Rank />
-        <ImageLinkForm onInputchange={this.onInputchange} onButtonSubmit={this.onButtonSubmit} />
-        <FaceRecognition imageURL={imageURL} box={box} />
+        {
+          route === "home"
+            ? <div>
+              <Logo />
+              <Rank />
+              <ImageLinkForm onInputchange={this.onInputchange} onButtonSubmit={this.onButtonSubmit} />
+              <FaceRecognition imageURL={imageURL} box={box} />
+            </div>
+            : <SignIn />
+        }
       </div>
     );
   }
