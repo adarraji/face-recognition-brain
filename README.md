@@ -32,4 +32,4 @@ You can get Clarifai API key [here](https://www.clarifai.com/)
 
 ![Image 2](./images/image-02.png)
 
-![Image 2](./images/image-02.png)
+![Image 2](./images/image-03.png)
