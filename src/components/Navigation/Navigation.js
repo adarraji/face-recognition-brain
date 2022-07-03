@@ -8,7 +8,6 @@ const Navigation = ({ onRouteChnage, isSignedIn }) => {
             </nav>
         );
     }
-
     else {
         return (
             <nav className="flex justify-end">

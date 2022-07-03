@@ -26,10 +26,10 @@ class App extends Component {
   }
 
   onRouteChnage = (route) => {
-    if (route === "home") {
-      this.setState({ isSignedIn: true });
-    } else if (route === "signout") {
+    if (route === "signout") {
       this.setState({ isSignedIn: false });
+    } else if (route === "home") {
+      this.setState({ isSignedIn: true });
     }
     this.setState({ route: route });
   }
@@ -67,7 +67,7 @@ class App extends Component {
     const { imageURL, box, route, isSignedIn } = this.state;
     return (
       <div className="App">
-        <Navigation onRouteChnage={this.onRouteChnage} />
+        <Navigation onRouteChnage={this.onRouteChnage} isSignedIn={isSignedIn} />
         {
           route === "home"
             ? <div>
