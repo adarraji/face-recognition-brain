@@ -29,3 +29,7 @@ You can get Clarifai API key [here](https://www.clarifai.com/)
 ## Screenshots
 
 ![Image 1](./images/image-01.png)
+
+![Image 2](./images/image-02.png)
+
+![Image 2](./images/image-02.png)
