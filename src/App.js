@@ -19,7 +19,7 @@ class App extends Component {
       input: "",
       imageURL: "",
       box: {},
-      route: "home"
+      route: "signin"
     };
   }
 
@@ -69,7 +69,7 @@ class App extends Component {
               <ImageLinkForm onInputchange={this.onInputchange} onButtonSubmit={this.onButtonSubmit} />
               <FaceRecognition imageURL={imageURL} box={box} />
             </div>
-            : <SignIn />
+            : <SignIn onRouteChnage={this.onRouteChnage} />
         }
       </div>
     );
