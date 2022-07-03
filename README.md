@@ -7,9 +7,7 @@ To run the application
 2. Run `npm install`
 3. Run `npm start`
 
-You must add your Clarifai API key in 
-
-` apiKey: `${process.env.REACT_APP_API_KEY}` `
+You must add your own API key in the `src/App.js` file to connect to Clarifai.
 
 You can get Clarifai API key [here](https://www.clarifai.com/)
 
