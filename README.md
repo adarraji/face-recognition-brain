@@ -1,4 +1,4 @@
-# face-recognition-brain
+# Face Recognition Brain
 This app detect faces in images. It uses Clarifai API face detection model.
 
 To run the application
@@ -22,4 +22,10 @@ You can get Clarifai API key [here](https://www.clarifai.com/)
 * Tachyons
 * Clarifai API
 
-## Deployment
+## Authors
+
+- **Ali Darraji** - [https://github.com/adarraji](https://github.com/adarraji)
+
+## Screenshots
+
+![Image 1](./images/image-01.png)
