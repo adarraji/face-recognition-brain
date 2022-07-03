@@ -1,9 +1,9 @@
 import React from "react";
 
-const Navigation = () => {
+const Navigation = ({ onRouteChnage }) => {
     return (
         <nav>
-            <p className="flex justify-end f4 black underline link dim pointer">SignOut</p>
+            <p onClick={() => onRouteChnage("signout")} className="flex justify-end f4 black underline link dim pointer">SignOut</p>
         </nav>
     );
 };

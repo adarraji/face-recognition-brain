@@ -20,12 +20,18 @@ class App extends Component {
       input: "",
       imageURL: "",
       box: {},
-      route: "signin"
+      route: "signin",
+      isSignedIn: false,
     };
   }
 
   onRouteChnage = (route) => {
     this.setState({ route: route });
+    if (route === "home") {
+      this.setState({ isSignedIn: true });
+    } else if (route === "signout") {
+      this.setState({ isSignedIn: false });
+    }
   }
 
   calculateFaceLocation = (data) => {
@@ -61,7 +67,7 @@ class App extends Component {
     const { imageURL, box, route } = this.state;
     return (
       <div className="App">
-        <Navigation />
+        <Navigation onRouteChnage={this.onRouteChnage} />
         {
           route === "home"
             ? <div>
