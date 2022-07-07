@@ -77,8 +77,20 @@ class App extends Component {
   onButtonSubmit = () => {
     this.setState({ imageURL: this.state.input });
     app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
-      .then(response => this.calculateFaceLocation(response))
-      .then(box => this.displayfaceBox(box))
+      .then(response => {
+        if (response) {
+          fetch("http://localhost:3000/image", {
+            method: "put",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              id: this.state.user.id,
+            })
+          })
+            .then(response => response.json())
+            .then(count => this.setState(Object.assign(this.state.user, { entries: count })))
+        }
+        this.displayfaceBox(this.calculateFaceLocation(response))
+      })
       .catch(err => console.log(err));
   }
 
