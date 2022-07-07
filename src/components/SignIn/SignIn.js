@@ -21,6 +21,7 @@ class SignIn extends React.Component {
 
     onSubmitSignIn = () => {
         console.log(this.state);
+        this.props.onRouteChnage("home")
     }
 
     render() {
@@ -33,7 +34,11 @@ class SignIn extends React.Component {
                             <legend className="f1 fw6 ph0 mh0">Sign In</legend>
                             <div className="mt3">
                                 <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
-                                <input className="pa2 input-reset ba bg-transparent hover-bg-black h    over-white w-100" type="email" name="email-address" id="email-address" />
+                                <input
+                                    className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+                                    type="email"
+                                    name="email-address"
+                                    id="email-address" />
                             </div>
                             <div className="mv3">
                                 <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
@@ -41,7 +46,7 @@ class SignIn extends React.Component {
                             </div>
                         </fieldset>
                         <div className="">
-                            <input onClick={() => onRouteChnage("home")} className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Sign in" />
+                            <input onClick={this.onSubmitSignIn} className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Sign in" />
                         </div>
                         <div className="lh-copy mt3">
                             <p onClick={() => onRouteChnage("register")} className="f6 link dim black db pointer">Register</p>
