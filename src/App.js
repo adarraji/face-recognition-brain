@@ -97,7 +97,7 @@ class App extends Component {
             </div>
             : (
               route === "signin"
-                ? <SignIn onRouteChnage={this.onRouteChnage} isSignedIn={isSignedIn} />
+                ? <SignIn onRouteChnage={this.onRouteChnage} isSignedIn={isSignedIn} loadUser={this.loadUser} />
                 : <Register onRouteChnage={this.onRouteChnage} loadUser={this.loadUser} />
             )
         }
