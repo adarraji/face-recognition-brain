@@ -32,6 +32,18 @@ class App extends Component {
     };
   }
 
+  loadUser = (data) => {
+    this.setState({
+      user: {
+        id: data.id,
+        name: data.name,
+        email: data.email,
+        entries: data.entries,
+        joined: data.joined
+      }
+    })
+  }
+
   onRouteChnage = (route) => {
     if (route === "signout") {
       this.setState({ isSignedIn: false });
@@ -86,7 +98,7 @@ class App extends Component {
             : (
               route === "signin"
                 ? <SignIn onRouteChnage={this.onRouteChnage} isSignedIn={isSignedIn} />
-                : <Register onRouteChnage={this.onRouteChnage} />
+                : <Register onRouteChnage={this.onRouteChnage} loadUser={this.loadUser} />
             )
         }
       </div>
