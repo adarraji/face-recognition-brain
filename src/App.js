@@ -83,7 +83,7 @@ class App extends Component {
   }
 
   render() {
-    const { imageURL, box, route, isSignedIn } = this.state;
+    const { imageURL, box, route, isSignedIn, user } = this.state;
     return (
       <div className="App">
         <Navigation onRouteChnage={this.onRouteChnage} isSignedIn={isSignedIn} />
@@ -91,7 +91,7 @@ class App extends Component {
           route === "home"
             ? <div>
               <Logo />
-              <Rank />
+              <Rank name={user.name} entries={user.entries} />
               <ImageLinkForm onInputchange={this.onInputchange} onButtonSubmit={this.onButtonSubmit} />
               <FaceRecognition imageURL={imageURL} box={box} />
             </div>
