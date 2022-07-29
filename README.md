@@ -1,5 +1,5 @@
 # Face Recognition Brain
-This front app detects faces in images. It uses Clarifai API face detection model.
+This frontend app detects faces in images. It uses Clarifai API face detection model.
 
 The backend application is [here](https://github.com/adarraji/face-recognition-brain-api).
 
