@@ -7,11 +7,6 @@ import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import SignIn from './components/SignIn/SignIn';
 import Register from './components/Rigister/Register';
-import Clarifai from "clarifai";
-
-const app = new Clarifai.App({
-  apiKey: `${process.env.REACT_APP_API_KEY}`
-});
 
 const initialState = {
   input: "",
