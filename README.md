@@ -10,6 +10,7 @@ To run the application
 2. Run `npm install`
 3. Run `npm start`
 
+
 ## Built With
 
 * HTML
@@ -18,6 +19,12 @@ To run the application
 * React
 * React Tilty
 * Tachyons
+
+
+## Deployment
+Deployed on Heroku
+
+You can see the website [here](https://smartbrain25.herokuapp.com/)
 
 
 ## Authors
