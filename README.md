@@ -1,16 +1,14 @@
 # Face Recognition Brain
-This app detect faces in images. It uses Clarifai API face detection model.
+This front app detects faces in images. It uses Clarifai API face detection model.
+
+The backend application is [here](https://github.com/adarraji/face-recognition-brain-api).
+
 
 To run the application
 
 1. Clone this repo
 2. Run `npm install`
 3. Run `npm start`
-
-You must add your own API key in the `src/App.js` file to connect to Clarifai.
-
-You can get Clarifai API key [here](https://www.clarifai.com/)
-
 
 ## Built With
 
