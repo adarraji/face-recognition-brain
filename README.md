@@ -24,12 +24,18 @@ To run the application
 ## Deployment
 Deployed on Heroku
 
-You can see the website [here](https://smartbrain25.herokuapp.com/)
+You can see the website [here](https://smartbrain2.netlify.app/)
 
 
 ## Authors
 
 - **Ali Darraji** - [https://github.com/adarraji](https://github.com/adarraji)
+
+
+## Deploy status
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fb9225d7-2f1c-4713-8fa9-8857e23a81f3/deploy-status)](https://app.netlify.com/sites/smartbrain2/deploys)
+
 
 ## Screenshots
 
