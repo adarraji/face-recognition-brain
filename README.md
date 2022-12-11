@@ -22,7 +22,8 @@ To run the application
 
 
 ## Deployment
-Deployed on Heroku
+
+Deployed on [Netlify](https://netlify.com)
 
 You can see the website [here](https://smartbrain2.netlify.app/)
 
