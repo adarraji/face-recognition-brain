@@ -73,7 +73,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({ imageURL: this.state.input });
-    fetch("https://mighty-citadel-11675.herokuapp.com/imageurl", {
+    fetch(`${process.env.REACT_APP_SERVER}/imageurl`, {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -83,7 +83,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch("https://mighty-citadel-11675.herokuapp.com/image", {
+          fetch(`${process.env.REACT_APP_SERVER}/image`, {
             method: "put",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
